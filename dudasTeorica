@@ -1,0 +1,7 @@
+JUE < VIE  , no deberia ser Ord(JUE) < Ord(VIE) Si no que pasa cuando tengo dos tipos de datos que cree que comparten cosas adentroa
+
+x = A0 es lo mismo que A0 = x ??
+
+En el ejemplo proc primo no es puede usar result = esPrimo(n)
+
+Cuando operamos con operadores no necesariamente es cierto lo que decimos

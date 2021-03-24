@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+	
+\newcommand{\n}{\aleph_{0}}
+\newcommand{\F}{\mathhbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\ol}{\overline}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\open}{\mathrm{o}}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}[section]
+\newtheorem*{remark}{Observación}
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemm}{Lema}
+\newtheorem{corollary}{Corolario}[theorem]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{prop}{Proposición}
+\newtheorem{ej}{Ejercicio}
+
+
+\fancyhead[R]{Compacidad}
+\fancyhead[L]{Alumno Javier Vera}
+\fancyhead[C]{Cálculo Avanzado}
+
+\begin{document}
+\begin{ej}
+	Sean $p$ y $q$ variables proposicionales ¿Cuáles de las siguientes expresiones son fórmulas bien formadas?
+
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{llll}
+			a) $(p \neg q)$ & d) $ \neg (p)$  & g) $(\neg p)$ \\
+			b) $p \lor q \land True$& e) $(p \lor \neg p \land q)$ &  h) $(g \land False)$   \\
+			c) $ (p \ra \neg p \ra q)$& f) $(True \land True \land True)$ &  i) $(p = q)$   \\
+\end{tabular}
+\end{table}
+
+Respuestas:
+
+\begin{table}[h]
+		\centering
+		\begin{tabular}{llll}
+			a) NO  & d)  NO  & g) SI \\
+			b) NO & e) NO  &  h) SI   \\
+			c) SI & f) SI &  i) SI   \\
+\end{tabular}
+\end{table}
+
+
+\end{ej}
+\begin{ej}
+	Respuestas
+\end{ej}
+\begin{table}[h]
+		\centering
+		\begin{tabular}{llll}
+			a) Bien & d) Bien  \\
+			b) Bien  & e) Mal    \\
+			c) Mal & f) Mal    \\
+\end{tabular}
+\end{table}
+\begin{ej}
+	$3 + 7 = \pi - 8 $ es un tipo Bool dado que compara dos numeros , y luego comparamos un tipo bool con otro tipo bool
+\end{ej}
+\begin{ej}
+	a) True b) True c) False d) True e) True f) True g) False
+\end{ej}
+
+\begin{ej}
+	a) Tautología b) Contradicción c) Tautología d) Contingencia e) Tautologia f) Tautología g) Contingencia h) Tautología i)
+	
+\end{ej}
+\begin{ej}
+	
+a) False mas fuerte que True $\quad$ b) $(p \land q)$ es mas fuerte que $(p\lor q)$ $\quad$c) Son igual de fuertes $\quad$ d) $(p \land q) $ es mas fuerte que p $\quad$ e) Son igual de fuertes $\quad$ f) p es mas fuerte que $(p \ra q)$ g) ninguna es mas fuerte que la otra. $\quad$ h) Ninguna es mas fuerte que la otra
+\end{ej}
+
+\begin{ej}
+	a) Trabajemos el termino de la izquierda 
+
+	$$ (1) \quad (\neg p \lor \neg q) \lor (p \land q) \ra (p \land q)$$ 
+
+	$$ (2) \quad \neg ((\neg p \lor \neg q) \lor (p \land q)) \lor (p \land q) \text{ (No me acuerdo el nombre)}$$
+
+	$$ (3) \quad (\neg (\neg p \lor \neg q) \land \neg (p \land q)) \lor (p \land q) \text{ (De Morgan)} $$
+
+	$$ (4) \quad ((p \land q) \land (\neg p \lor \neg q)) \lor (p \land q) \text{ (Doble de Morgan)}$$ 
+
+	$$ (5) \quad ((p \land q) \land \neg p) \lor ((p\land q) \land \neg q)) \lor (p \land q) \text{ (Distributiva)}$$
+
+	$$ (6) \quad (False \lor False ) \lor (p \land q)$$
+
+	$$ (7) \quad False \lor (p \land q)$$
+
+	$$ (8) \quad p \land q$$
+
+
+	b) 
+
+	$$ (1) \quad (p \lor q) \land (p \lor r)$$
+
+	$$ (2) \quad ((p \lor q) \land p) \lor ((p\lor q) \land r) \text{ (Distributiva)}$$
+
+	$$ (3) \quad ((p \land p) \lor (p \land q)) \lor ((p \land r) \lor (q \land r)) \text{ (Distributiva)}$$
+
+	$$ (4) \quad p \lor ((p \land r) \lor (q \land r)) $$
+
+	$$ (5) \quad p \lor ((p \lor q) \land r)) \text{ (Inversa de Distributiva)}$$
+
+	$$ (6) \quad (p \lor (p \lor q)) \land (p \land  r)  $$
+
+	$$ (7) \quad (p \lor q) \land (p \land  r)  $$
+
+	$$ (8) \quad p \lor (q \land  r)  $$
+
+	$$ (9) \quad \neg p \ra (q \land  r)  $$
+
+				Por ende eran equivalentes!
+
+	c)
+	$$ \neg(\neg p) \ra (\neg(\neg p \land \neg q))$$
+\end{ej}
+
+\end{document}
+
+
