@@ -211,9 +211,8 @@ a) False mas fuerte que True $\quad$ b) $(p \land q)$ es mas fuerte que $(p\lor 
 
 	$$ (2) \quad (\neg p \lor q) \land (\neg p \lor \neg( q\ra r))$$
 
-	$$ (3) \quad $$
+	Falta terminar. Será en otro momento
 
-	Entonces son equivalentes!
 \end{ej}
 
 \begin{ej}
@@ -226,20 +225,18 @@ a) False mas fuerte que True $\quad$ b) $(p \land q)$ es mas fuerte que $(p\lor 
 
 	$$ f \ra (e \lor m) \land \neg (e \land m)$$
 
-
 	$$ \neg f \ra \neg e \quad (f \lor \neg e) $$
 
 	$$  f \land e \ra m \quad (\neg (f \land e) \lor m)$$
 
 	b) Veamos la primera afirmación
 
-	$$ \neg f \lor ((e \lor m) \land \neg(e \land m))$$
 
-	$$(\neg f \lor (e \lor m) )\land (\neg f \lor \neg ( e \land m)) $$
+	$$ (\neg f \lor ((e \lor m) \land \neg (e \land m) )\land (f \lor \neg e) \land (\neg (f \land e) \lor m) \ra \neg e$$
 
-	$$ ((\neg f \lor m ) \lor e ) \land (\neg f \lor (\neg  e \lor \neg m))$$
+	$$ (\neg f \lor ((e \lor m) \land \neg (e \land m) )\land (f \lor \neg e) \land (\neg (f \land e) \lor m) \ra \neg e$$
 
-	$$ (True \lor e) \land   $$
+	Bueno hay que seguir hasta llegar a un TRUE , pero no lo voy a hacer
 \end{ej}
 
 \begin{ej} Definamos algunas equivalencias
@@ -275,11 +272,76 @@ a) False mas fuerte que True $\quad$ b) $(p \land q)$ es mas fuerte que $(p\lor 
 
 
 \begin{ej}
-	
+	a) T b) T c)T d) F e) Undef f) F g) T h) T i) T
 \end{ej}
 
+\begin{ej}
+	Se hizo en la teórica la diferencia es que hay un caso con indefinido que es False , es el caso de $p \land q$ , con p False y q indefinido, si no fuese el $\land_{L} $ entonces evaluaria indefinido , pero con el $\land_{L}$ al tener un false en $p$ automaticamente la afirmación no puede sere verdadera y evalua a falsa
+\end{ej}
+
+\begin{ej}
+	Sucede algo similar solo que en este caso $p$ es True , por ende $p \lor_{L}$ lo que sea automaticamente evalua a True
+\end{ej}
+
+\begin{ej}
+	Devuelta algo similar solo que funciona cuando $p$ es verdadero $p \ra_{L} q$ automaticamente es Verdadero sin importar si $q$ está indefinido 
+\end{ej}
+
+\begin{ej}
+	a) Indef b) True c) False d) True e) True f) True g) False
+
+\end{ej}
+    
+\begin{ej}
+Hay que tener imaginación
+
+\end{ej}
+
+\begin{ej}
+a) Sale a ojo	
+
+ b) 
+
+ I) n = 1 y=1 z=1
+
+ II) n = m = 1 z =0
+
+ III ) no tiene libres
+
+ IV) esta mal formada
+
+ El resto no tienen variables libres
+\end{ej}
+
+\begin{ej} Veamos:
+
+a) Versión corregida $pred$ $a()\{(\forall x : \N)(((0 \leq x < 10) \land P(x)) \ra Q(x) \}$	
+
+b) Versión corregida $pred$ $a()\{\neg (\exists x : \Z)((0 \leq x < 10) \land P(x) \land Q(x))\} $
+\end{ej}
+
+\begin{ej} Solución:
+
+	a) $aux$ $suc$ $(x : \Z): \Z = x +1$
+
+	b) $aux$ $suma$ $(x,y : \R): \R = x +y$
+
+	c) $aux$ $producto$ $(x,y : \R): \R = xy$
+
+	d) $pred$ $esCuadrado$ $(x : \Z)\{x > 0 \land \sqrt{x} \in \Z \}$
+
+	e) $pred$ $esPrimo$ $(x:\Z)\{(x > 0 ) \land (\forall x'\in \N_{0})(x'< x \ra x $ mod $ x' \neq 0)\}$
+
+	f) $pred$ $sonCoprimos$ $(x,y:\Z)\{(\forall d \in \N_{> 1} )(x $ mod $  d = 0 \ra y $ mod $ d \neq 0)\}$
+
+	g) $pred$ $divisoresGrandes$ $(x,y : \Z)\{(\forall r \in \Z)((x$ mod $r \land r \neq 1 )> y) \}$
+	
+	h) $pred$ $mayorPrimoQueDivide$ $(x,y : \Z)\{esPrimo(y) \land (x$ mod  $y = 0) \land (\forall j \in \Z)((esPrimo(j) \land x $ mod $ j=0) \ra j < y) \}$
+
+	i) $pred$ $sonPrimoHermanos$ $(x,y : \Z)\{esPrimo(x) \land esPrimo(y) \land (\neg \exists j \in \N)(esPrimo(j) \land (x<j<y) \lor (y<j<x) )\}$
 
 
+\end{ej}
 
 \end{document}
 

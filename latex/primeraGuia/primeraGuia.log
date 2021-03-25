@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.3.19)  25 MAR 2021 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.3.19)  25 MAR 2021 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -306,24 +306,38 @@ This may cause the page layout to be inconsistent, however.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2] [3] [4] [5]
-(./primeraGuia.aux) ) 
+] [2] [3] [4]
+Overfull \hbox (11.36668pt too wide) in paragraph at lines 341--342
+[]\OT1/cmr/m/n/12 i) $\OML/cmm/m/it/12 pred$ $sonPrimoHermanos$ $\OT1/cmr/m/n/1
+2 (\OML/cmm/m/it/12 x; y \OT1/cmr/m/n/12 : \U/msb/m/n/12 Z\OT1/cmr/m/n/12 )\OMS
+/cmsy/m/n/12 f\OML/cmm/m/it/12 esPrimo\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/c
+mr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 esPrimo\OT1/cmr/m/n/12 (\OML/cm
+m/m/it/12 y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OT1/cmr/m/n/12 (\OMS/cmsy/m/n/
+12 :9\OML/cmm/m/it/12 j \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 N\OT1/cmr/m/n/12 )(\OM
+L/cmm/m/it/12 esPrimo\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) \OMS/
+cmsy/m/n/12 ^
+ []
+
+[5] [6] (./primeraGuia.aux) ) 
 Here is how much of TeX's memory you used:
  3674 strings out of 479383
  50620 string characters out of 5875830
- 341586 words of memory out of 5000000
+ 343586 words of memory out of 5000000
  20759 multiletter control sequences out of 15000+600000
  408382 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,11n,72p,336b,284s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on primeraGuia.pdf (5 pages, 55377 bytes).
+ 66i,11n,72p,369b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on primeraGuia.pdf (6 pages, 88696 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 55 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
