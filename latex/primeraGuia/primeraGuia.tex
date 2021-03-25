@@ -140,8 +140,146 @@ a) False mas fuerte que True $\quad$ b) $(p \land q)$ es mas fuerte que $(p\lor 
 				Por ende eran equivalentes!
 
 	c)
-	$$ \neg(\neg p) \ra (\neg(\neg p \land \neg q))$$
+	$$ (1) \quad \neg(\neg p) \ra (\neg(\neg p \land \neg q))$$
+
+	$$ (2) \quad  p \ra (p \lor q)$$ 
+
+	$$ (3) \quad \neg  p \lor (p \lor q)$$
+
+	$$ (4) \quad (\neg p \lor p ) \lor q \text{ (Asociatividad)}$$
+
+	$$ (5) \quad True \lor q$$
+
+	$$ (6) \quad True$$
+
+	Entonces no son equivalentes!
+
+	d)
+
+	$$ (True \land p) \land (\neg p \lor False)) \ra \neg (\neg p \lor q) $$
+
+	$$ (1) \quad ((True \land p) \land \neg p ) \lor ((True \land p) \land False) \ra \neg (\neg p \lor q) \text{ (Distributiva)}$$
+
+	$$ (2) \quad (True \land (p \land \neg p)) \lor ((True \land False) \land p) \ra (p \land \neg q) \text { (Asoc y De Morgan)}$$
+
+
+	$$ (3) \quad (True \land False ) \lor (False \land p) \ra (p \land \neg q)$$
+
+	$$ (4) \quad (False \lor False )\ra (p \land \neg q) $$
+
+	$$ (5) \quad \neg False \lor (p \land \neg q) $$
+
+	$$ (6) \quad (True \lor p ) \land (True \lor \neg q)$$
+
+	$$ (7) \quad True \land True$$
+
+	$$ (8) \quad True $$
+
+	Entonces no son equivalentes
+
+	e) 
+
+	$$ p \lor (\neg p \land q))$$
+
+	$$ (1) \quad (p \lor \neg p) \land (p \lor q)$$
+
+	$$ (2) \quad True \land (p \lor q)$$
+
+	$$ (3) \quad (p \lor q)$$
+
+	$$ (4) \quad \neg p \ra q$$
+
+	f)
+
+	$$ \neg (p \land (q \land s))$$
+
+	$$ (1) \quad \neg ((p \land q) \land s)$$
+
+	$$ (2) \quad \neg (p \land q) \lor \neg s$$
+
+	$$ (3) \quad s \ra \neg (p\land q)  $$
+
+	$$ (4) \quad s \ra (\neg p \lor \neg q)$$
+
+	Entonces son equivalentes!
+
+	g)
+
+	$$ p \ra (q \land \neg (q \ra r))$$
+
+	$$ (1) \quad \neg p \lor (q\land \neg(q \ra r))$$
+
+	$$ (2) \quad (\neg p \lor q) \land (\neg p \lor \neg( q\ra r))$$
+
+	$$ (3) \quad $$
+
+	Entonces son equivalentes!
 \end{ej}
+
+\begin{ej}
+
+	Muy amplio el ejercicio
+	
+\end{ej}
+\begin{ej}
+	a) 
+
+	$$ f \ra (e \lor m) \land \neg (e \land m)$$
+
+
+	$$ \neg f \ra \neg e \quad (f \lor \neg e) $$
+
+	$$  f \land e \ra m \quad (\neg (f \land e) \lor m)$$
+
+	b) Veamos la primera afirmación
+
+	$$ \neg f \lor ((e \lor m) \land \neg(e \land m))$$
+
+	$$(\neg f \lor (e \lor m) )\land (\neg f \lor \neg ( e \land m)) $$
+
+	$$ ((\neg f \lor m ) \lor e ) \land (\neg f \lor (\neg  e \lor \neg m))$$
+
+	$$ (True \lor e) \land   $$
+\end{ej}
+
+\begin{ej} Definamos algunas equivalencias
+
+	$p \equiv$ todos conocen a Juan
+
+	$q \equiv$ todos conocen a Camila
+
+	$r \equiv$ todos conocen a Gonzalo
+
+	Ahora sabemos
+
+	$$p \ra q$$
+
+	$$p \ra (q \ra r) $$
+
+	Ahora sabemos que $p$ es verdadero
+
+	Pero entonces $q$ es verdadero 
+
+	Ademas p es verdadero entonces $(q\ra r)$ es verdadero
+
+	Pero como sabiamos que $q$ era verdadero entonces $r$ es necesariamente verdadero
+
+	Entonces deducimos $p \ra r$ por lo tanto si todos conocen a Juan , todos conocen a Gonzalo
+\end{ej}
+
+\begin{ej}
+	Supongamos $p \equiv$ Haroldo Pelea y $q \equiv$ Haroldo vuelve lastimado.
+	Ahora sabemos que es cierto $p \ra q$ (Haroldo pelea entonces vuelve lastimado).
+	Teniendo esto sabemos que no es cierto que si Haroldo vuelve lastimado entonces peleó, se puede ver facilmente haciendo la tabla de $p \ra q$ , si $p$ es verdadero $q$ también lo és. Pero si $q$ es verdadero $p$ puede o no ser verdadero
+\end{ej}
+
+
+\begin{ej}
+	
+\end{ej}
+
+
+
 
 \end{document}
 
