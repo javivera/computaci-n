@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.3.19)  25 MAR 2021 18:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.3.19)  28 MAR 2021 12:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -322,11 +322,11 @@ cmsy/m/n/12 ^
 Here is how much of TeX's memory you used:
  3674 strings out of 479383
  50620 string characters out of 5875830
- 343586 words of memory out of 5000000
+ 343597 words of memory out of 5000000
  20759 multiletter control sequences out of 15000+600000
  408382 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,11n,72p,369b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,12n,72p,369b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/te
@@ -334,7 +334,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 .pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on primeraGuia.pdf (6 pages, 88696 bytes).
+Output written on primeraGuia.pdf (6 pages, 88708 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream

@@ -40,9 +40,9 @@
 \newtheorem{ej}{Ejercicio}
 
 
-\fancyhead[R]{Compacidad}
+\fancyhead[R]{Práctica 1}
 \fancyhead[L]{Alumno Javier Vera}
-\fancyhead[C]{Cálculo Avanzado}
+\fancyhead[C]{Algoritmos y Datos I}
 
 \begin{document}
 \begin{ej}
@@ -330,11 +330,11 @@ b) Versión corregida $pred$ $a()\{\neg (\exists x : \Z)((0 \leq x < 10) \land P
 
 	d) $pred$ $esCuadrado$ $(x : \Z)\{x > 0 \land \sqrt{x} \in \Z \}$
 
-	e) $pred$ $esPrimo$ $(x:\Z)\{(x > 0 ) \land (\forall x'\in \N_{0})(x'< x \ra x $ mod $ x' \neq 0)\}$
+	e) $pred$ $esPrimo$ $(x:\Z)\{(x > 1 ) \land (\forall x'\in \N_{0})(x'< x \ra x $ mod $ x' \neq 0)\}$
 
 	f) $pred$ $sonCoprimos$ $(x,y:\Z)\{(\forall d \in \N_{> 1} )(x $ mod $  d = 0 \ra y $ mod $ d \neq 0)\}$
 
-	g) $pred$ $divisoresGrandes$ $(x,y : \Z)\{(\forall r \in \Z)((x$ mod $r \land r \neq 1 )> y) \}$
+	g) $pred$ $divisoresGrandes$ $(x,y : \Z)\{(\forall r \in \Z)((x$ mod $r = 0) \land r \neq 1 )> y) \}$
 	
 	h) $pred$ $mayorPrimoQueDivide$ $(x,y : \Z)\{esPrimo(y) \land (x$ mod  $y = 0) \land (\forall j \in \Z)((esPrimo(j) \land x $ mod $ j=0) \ra j < y) \}$
 
