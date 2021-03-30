@@ -1,0 +1,197 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+	
+\newcommand{\n}{\aleph_{0}}
+\newcommand{\F}{\mathhbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\ol}{\overline}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\open}{\mathrm{o}}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}[section]
+\newtheorem*{remark}{Observación}
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemm}{Lema}
+\newtheorem{corollary}{Corolario}[theorem]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{prop}{Proposición}
+\newtheorem{ej}{Ejercicio}
+
+
+\fancyhead[R]{Práctica 1}
+\fancyhead[L]{Alumno Javier Vera}
+\fancyhead[C]{Algoritmos y Datos I}
+
+\begin{document}
+\begin{ej}
+	a) 3 b) $\pi$ y el resto de la lista despues c) 3 d) $<$2,3,5,7,11$>$ d) e) 6 Bueno el resto son triviales realmente.
+\end{ej}
+
+\begin{ej}
+
+	a) True b) True c) False , no se puede salvar. d) True e) True f) True g) False, no es salvable h) False, no es salvable
+\end{ej}
+
+\begin{ej}
+	
+	a) True b) False. Contra ejemplo: $<a,b> |<e,a,b>| \neq |<b>|$ c) True d) True e) True f) False, contra $<1,2>$ g) False $<1,3>$ h) True i) True
+\end{ej}
+
+\begin{ej}
+	a) $pred$ $estaAcotada$ $(s:Seq<\Z >)\{ (\forall x \in S)(1\leq x \leq 100)\}$
+	
+	b) Está hecho en clase
+
+	c) Ni idea a que se refiere con prefijo
+
+	d) $pred$ $estaOrdenada$ $(s:Seq<\Z >)\{ (\forall j \in \Z)(0 \leq j < |s|-1 \ra_{L} s[j] \leq s[j+1]) \} $
+
+	e) $pred$ $todosPrimos$ $(s:Seq<\Z >)\{ (\forall x \in S)(esPrimo(x))\}$
+
+	f) $pred$ $primosEnPosicionesPares$ $(s:Seq<\Z >)\{ (\forall i \in \Z)(0 < i< |S| \ra_{L} esPrimo(s[i]) \land_{L} i$ mod $2 = 0 )\}$
+	
+	g) $pred$ $todosIguales$ $(s:Seq<\Z >)\{ (\forall x \in S)((\forall r \in S)(x = r))\}$
+
+	h) $pred$ $hayUnoParQueDivideAlResto$ $(s:Seq<\Z >)\{ (\exists x \in S)(x$ mod $2=0 \land (\forall r \in S)( r $ mod $x = 0))\}$
+
+	i) $pred$ $hayUnoEnPosicionParQueDivideAlResto$ $(s:Seq<\Z >)\{ (\exists j \in \Z)(0\leq j < |s| \land_{L} j $ mod $ 2 = 0 \land (\forall r \in S)( r $ mod $x = 0))\}$
+
+	j) $pred$ $sinRepetidos$ $(s:Seq<\Z >)\{ (\forall j \in \Z)(0 \leq j < |s| \ra_{L} (\forall x \in S)(s[j] \neq x)\}$
+
+	k) Es igual al de estaOrdenada 
+
+	l) $pred$ $todoEsMultiplo$ $(s:Seq<\Z >)\{ (\forall x \in S)((\exists n \in \Z)((\exists s \in S)(s.n = x)))\}$
+
+	m) $pred$ $enTresPartes$ $(s:Seq<\Z >)\{ (\forall j \in \Z)(0\leq j < |s|-1  \ra_{L} s[j] +1 = s[j+1] \lor s[j] = s[j+1]) \land (\forall r \in \{0,1,2\})(r \in S)\land (\forall z \in \Z)(z \notin \{0,1,2\} \ra z \notin s)\}$
+
+	Si sacamos la condición del medio , acpeta lo que pide el ejercicio modificado
+
+	n) $pred$ $esPermutacionOrdenada$ $(s:Seq<\Z >,r:Seq<\Z>)\{ |s| = |r| \land estaOrdeanda(s) \land (\forall x \in s)((\exists y \in r)(x=y)) \land (\forall x \in S)(\# apariciones(s,x) = \# apariciones(r,x)) \}$
+\end{ej}
+
+\begin{ej}
+	a) $aux$ $intercambiarPrimeroPorUltimo(s: seq<\Z>) : seq<\Z> =$
+	
+	$concat(concat(s[|s|-1],subset(s,1,|s|-1)),s[0])$	
+
+	b) $pred$ $esReverso(s:seq<\Z>,t:seq<\Z>)\{ |s| = |t| \land (\forall j \in \Z)( 0\leq j < |s| \ra_{L} s[i] = t[|t| -1 -i])\}$ 
+
+	d) $aux$ $agregarTresCeros(s: seq<\Z>) : seq<\Z> = concat(s,<0,0,0>) $
+
+	f) $aux$ $sumarUno(s: seq<\Z>) : seq<\Z> =$
+
+\end{ej}
+
+\begin{ej}
+	a) $pred$ $enteroCumple(s:seq<\Z>)\{ (\forall x \in s)(P(x) \ra Q(x))\}$
+ 
+	b) $pred$ $enteroNoCumple(s:seq<\Z>)\{(\forall x \in s)(P(x) \ra \neg Q(x))\}$
+
+	c) $pred$ $posicionesParesP(s:seq<\Z>)\{(\forall j \in \Z)(0\leq j < |s| \ra_{L} (P(s[j]) \land j$ mod $2 = 0 \ra \neg Q(x)))\}$
+
+	d) $pred$ $cumplenPsonPares(s:seq<\Z>)\{(\forall j \in \Z)(0\leq j < |s| \ra ((P(s[j]) \land Q(j)) \ra s[j]$ mod $2 = 0)\}$
+
+	e) $pred$ $siEnteroNoCumplePNingunoCumpleQ(s:seq<\Z>)\{(\forall x \in s)(\neg P(s) \ra (\forall y \in s)(\neg Q(s)\}$
+
+	f) $pred$ $siEnteroNoCumplePNingunoCumpleQ(s:seq<\Z>)\{(\forall x \in s)(\neg P(s) \ra (\forall y \in s)(\neg Q(s))) \lor ( \forall s \in S)(P(s) \ra (\exists m,n\in s)( Q(m)\land Q(n))\}$
+
+\end{ej}
+\begin{ej}
+	a) Hay que cambiar el y luego por entonces luego, de lo contrario la afirmación seria false siempre , por que existen i enteros que estan fuera de rango. Por ejemplo la lista $<1>$. Asumiendo que P(1) evalua True, daria False dado que i= -1 esta fuera de rango por lo que el y luego evalua a false , entonces no es cierto que para todo i se cumpla la afirmación, sin embargo la afirmación debería ser True con esa lista
+
+	b) Hay que cambiar el entonces luego por un y luego, de lo contrario la afirmación sería verdadera siempre dado que cualquier i entero que este fuera del rango haría la expresión true, por ejemplo la secuencia <1> asumiendo que P(1) es false, daria true, por que i = -2 evalua a true , entonces existe un i , sin embaro no hay ningun elemento en la lista que cumpla P
+\end{ej}
+
+\begin{ej}
+	a) $(\forall k : \Z)((0\leq k < 10) \ra P(k))$ es mas fuerte que $P(3)$	
+
+	b) Devuelta la de para todo es mas fuerte P(3)
+
+	c) Esto es lo mismo que $(\forall s \in S)(P(s) \ra Q(s)) y (\forall s \in s)(Q(s))$ , haciendo tabla de valores vemos que Q implica (P implica Q), Entonces derecha es mas fuerte que izquierda
+
+	d) Ninguna es mas fuete que otra
+
+	e) Niguna es mas fuerte que otra
+
+	f) Derecha implica izquierda
+
+\end{ej}
+
+\begin{ej}
+	a) Son equivalentes.
+
+	b) Son equivalentes
+
+	c) No son equivalentes. Por ejemplo la lista <1,2> cumple el primer caso , dado que para cualquier indice existe otro indice (él mismo) que cumple que la lista en ese índice es igual a la lista en el segundo indice. Pero no cumple la segunda expresión dado que con j = 0 no es cierto que para todo indice i se de s[j] = s[i] por ejemplo con i = 1
+\end{ej}
+
+\begin{ej}
+	a) 8 b) $\pi$ c) 0 d) Undef e) Undef f) 0 g) Undef h) 15 i) 4 j) 0
+\end{ej}
+\begin{ej}
+	$pred$ $esPrimo (n:<\Z>)\{(\sum_{i=2}^{n-1}$ if $n$ mod $2 = 0$ then $1$ else $0) = 0  \}$
+\end{ej}
+
+\begin{ej}
+	a) $\sum_{n = 0 }^{|s|-1} $ if $s[n] = e $ then $1$ else $0$ 
+
+	b) $\sum_{n = 0 }^{|s|-1} $ if $n $ mod $2 = 0 $ then $s[n]$ else $0$ 
+
+	c) $\sum_{n = 0 }^{|s|-1} $ if $s[n] \geq 0 $ then $s[n]$ else $0$ 
+
+	d) $\sum_{n = 0 }^{|s|-1} $ if $s[n] \neq 0 $ then $\frac{1}{s[n]}$ else $0$ 
+
+	e) $\sum_{n = 0 }^{|s|-1} $ if $esPrimo(s[n])$ then $1$ else $0$ 
+\end{ej}
+
+\begin{ej}
+	$pred$ $esPermutacion$ $(s:Seq<\Z >,r:Seq<\Z>)\{ |s| = |r| \land (\forall x \in s)((\exists y \in r)(x=y))\land (\sum_{n=0}^{|s| - 1} s[n] = \sum_{n=0}^{|s| - 1} r[n]  ) \}$
+\end{ej}
+
+\begin{ej}
+	a) $\sum_{n = 0}^{|s|-1}(\sum_{j=0}^{|s[n]|-1}s[n][j])$
+
+	b) $\sum_{n=0}^{|s|-1} if |s[n]| = 0$ then $1$ else $0 $
+
+	c) $\sum_{n=0}^{|s|-1} subset(s[n],|s[n]|-1,|s[n]|) $
+
+	d) $(\sum_{n=0}^{|s|-2} if |s[n]| = |s[n+1] |$ then $0$ else $1) = 0 $
+
+	e) $\sum_{n=0}^{|s|-1} ( \sum_{r=0}^{|s[n]|-1} if$ r mod $ 2 \neq 0 $ then $ s[n] $ else $1)  $
+\end{ej}
+
+\begin{ej}
+	 $\sum_{n=0}^{|s|-1} if s[n] =$" " then $1$ else $0$
+\end{ej}
+
+\begin{ej}
+	 $(\sum_{n=0}^{|s|-1} if s[n] \in <"1","2", .... ,"9"> $ then $1$ else $0$
+\end{ej}
+
+
+
+\end{document}
+
+
