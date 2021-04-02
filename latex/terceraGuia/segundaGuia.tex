@@ -1,0 +1,196 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+	
+\newcommand{\n}{\aleph_{0}}
+\newcommand{\F}{\mathhbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\ol}{\overline}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\open}{\mathrm{o}}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}[section]
+\newtheorem*{remark}{Observación}
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemm}{Lema}
+\newtheorem{corollary}{Corolario}[theorem]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{prop}{Proposición}
+\newtheorem{ej}{Ejercicio}
+
+
+\fancyhead[R]{Práctica 1}
+\fancyhead[L]{Alumno Javier Vera}
+\fancyhead[C]{Algoritmos y Datos I}
+
+\begin{document}
+\begin{ej}
+	a) Reescribamos $post \{ 0 \leq result \leq |l| -1 \land_{L} l[result] = elem \}$
+
+b) Está mal , por que con i=0 , falla dado que s[-1] no está definido. modificando el rango para que i sea mayor (no mayor o igual) que cero, ya es suficiente. Ni siquiera tendría que ver en la pre que mi lista no sea vacía , por que si fuera vacia no habría nada entre 1 y 0 por lo tanto siempre seria falsa ese rango entonces siempre true esa afirmacion entera y todo la posta seria true. 
+
+
+c) Reescribo la post $post$ $\{result \in l \land (\forall y \in \Z)((y \in l \land y \neq result ) \ra y > result)\}$ 
+
+
+\end{ej}
+
+\begin{ej}
+a) $l=<6,7,8>$ $suma = 1$ la subsequencia $<6>$ no suma 1
+
+b) Seguiría siendo incorrecto , con el mismo ejemplo min suma es 0 , dado que no hay ningun negativo en la lista y max suma seria 21 , por lo tanto suma podría ser 1 como antes
+
+c) Reescribamos $Pre \{ (\exists s \in seq<\Z>)(esSubSecuencia(s,l) \land suma = \sum_{i=0}^{|s|-1} s[i]) \}$
+
+$pred$ $esSubSecuencia(s:seq<\Z>,l:seq<\Z>)\{ (\forall x \in \Z)(x \in s \ra \# apariciones(x,s) \leq \# apariciones(x,l))\}$
+\end{ej}
+
+\begin{ej}
+	a)
+	I) Posibles = 0
+
+	II) Posibles = \{1,-1\} 
+
+III) Posibles = $\{\sqrt{27} , - \sqrt{27}\}$
+
+b) I) 3
+
+II) 0 o 3
+
+III) Cualquier indice válido
+
+c)  I) 3
+
+II) 0
+
+III) 0
+
+d) Cuando hay una sola aparición del máximo
+\end{ej}
+\begin{ej}
+	a) Esta mal por el y luego , cualquier a va a ser o mayor o igual que cero o menor que cero , por lo tanto no va a cumplir ambas guardas nunca
+
+b) Pusieron un o , eso mejoró , pero falto el menor o igual para a mayor que 0
+
+c) Está bien
+
+d) Esá bien
+
+e) el o causa problemas , supongamos que ponemos un result diferente de 2.b y un a menor que 0 entonces la primera condicion no se cumple por que seria true implicando false, entonces se tiene que cumplir la segunda como a < 0 automaticamente la segunda se cumple , por lo que result podria ser cualquier cosa que no sea 2.b
+
+f) Parece correcta por lo menos conceptualmente , no se si es válido escribirlo así
+
+\end{ej}
+
+\begin{ej}
+	a) Devuelve 9 , si , cumpele la postcondición
+
+	b) Con 0,5 no funciona , por que el cuadrado de 0,5 es mas pequeño que 0,5 . Con el 0,2 funciona por que lo hace NO negativo , lo mismo con el -7 y finalmente con el 1 no funciona por que 1 al cuadrado es 1
+
+	c) $pre \{a > 1 \lor a < 0\}$
+\end{ej}
+
+\begin{ej}
+	a) $P3\ra P1 \ra P2 $ 
+
+	b) $Q3 \ra Q1 \ra Q2$ (En número reales)  
+
+	c) No se si se refiere a escribir en algun lenguaje , o en small talk de ambas formas es trivial 
+
+	d) I) Si , por que $x \leq -10 \ra x \leq 0$
+
+	II) No , por que $x \leq 10 $ no implica $x \leq 0$ entonces el algoritmo, basado en E1 podria hacer cosas raras como enviar cualquier x mayor que cero a 0, cumpliendo E1 , pero no cumpliendo esta especificacion con por ejemplo x = 4 
+
+	III) Si por que la post de E1 implica la post de este ejemplo
+
+	IV) No por que la post de E1 no implica la posta implica la posta de este ejemplo
+
+	V) Si porque tanto la pre como la post de E1 implican la pre y post de este ejemplo
+
+	VI) No se cumple la pre de E1 , entonces puede suceder cualquier cosa en esos casos para la post, cosas que no cumpla la post como por ejemplo si el algoritmo enviaba todos los numeros positivos menores que 10 al -20 y el resto cumple E1 , en ese caso se cumple E1 , pero en este ejemplo el 4 cumple la pre sin embargo el algoritmo devolvio algo negativo entonces no cumple la post del ejemplo
+
+	VII) La post de E1 no implica la post de este ejemplo entonces puedo tener casos que cumple la post de E1 , pero no cumple la post de este ej que es mas restringida 
+	VIII) Devuelta la pre del E1 no implica la del ejemplo , por lo tanto con los casos que no cumplen en E1 podria hacer cualquier cosa el algortimo , y esos casos cumpliendo el ejemplo podrian no cumplir la post
+
+	e) La precondición de mi reemplazo debe ser implicada por la condición del original 
+
+	La postcondición de mi reemplazo debe ser implicada por la condicion del original
+\end{ej}
+
+\begin{ej}
+	a) si se cumple pre de p1 entonces $x \neq 0$ por lo tanto $n \leq 0 \ra x \neq 0$ es lo mismo que $n \leq 0 \ra True$ que es siempre verdadera
+
+	b) Si , por que son equivalentes las post
+
+	c) Esto es cierto , por que toda la especificacion de P1 , implica la de P2 , por lo tanto podemos decir que P1, esta contenida en P2 , como nosotros hicimos algoritmo en base a P2 , entre comillas consideramos todos los casos de P1 y alguno más, pero esos no nos importan por que P1 no los contempla
+
+\end{ej}
+\begin{ej}
+	
+la post de n-esimo1 no implica la de n-esimo2 y viceversa , por lo tanto , un algoritmo que cumple un proc no necesariamente cumple el del otro
+\end{ej}
+
+\begin{ej}
+	a) $proc$ esPar $($in $ z  : \Z )\{$
+
+		$pre\{True\}$
+
+		$post\{result = True \iff z$ mod $2 = 0\}$
+
+	$\}$
+
+	b)$in$ n,m$ :\Z , out$ result$:Bool $ 
+
+	$pre\{ True\}$
+
+	$post\{result = True \iff (\exists k \in \Z)(n = mk)\}$
+
+
+		c) $pre\{\frac{n}{m} \neq 0\}$
+
+		$post\{result = \frac{m}{n}\}$
+
+		d) in l lista out result lista $pre\{True\}$ 
+
+		$post\{(\forall j \in \N)(0\leq j < |l| \ra_{L} ( ord('0') \leq ord(l[j]) \leq ord('9')) \ra l[j] \in result)\}$
+
+		e)$pre\{True\}$
+
+		$post\{|result| = |l| \land (\forall i \in \Z)((0\leq i < |s| \land i$ mod $2 \neq 0) \ra result[i] = 2*l[i])\}$
+
+		f) in z entero , out result seq $pre\{True \}$
+
+		$post\{(\forall n \in \N)(z$ mod $n = 0 \ra (n \in result \land \# apariciones(n,result) = 1)) \land (z$ mod $ n \neq 0 \ra n \notin result)\}$
+
+
+\end{ej}
+
+
+
+
+
+
+\end{document}
+
+
