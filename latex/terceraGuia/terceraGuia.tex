@@ -177,16 +177,95 @@ la post de n-esimo1 no implica la de n-esimo2 y viceversa , por lo tanto , un al
 
 		e)$pre\{True\}$
 
-		$post\{|result| = |l| \land (\forall i \in \Z)((0\leq i < |s| \land i$ mod $2 \neq 0) \ra result[i] = 2*l[i])\}$
+		$post\{|result| = |l| \land (\forall i \in \Z)(((0\leq i < |s| \land i$ mod $2 \neq 0) \ra result[i] = 2*l[i])$
+
+		$\land (0 \leq i < |s| \land_{L} i$ mod $2 = 0 \ra result[i] = l[i])\}$
 
 		f) in z entero , out result seq $pre\{True \}$
 
 		$post\{(\forall n \in \N)(z$ mod $n = 0 \ra (n \in result \land \# apariciones(n,result) = 1)) \land (z$ mod $ n \neq 0 \ra n \notin result)\}$
 
-
 \end{ej}
 
+\begin{ej}
+	a) No , no tiene sentido , por que cero no tiene multiplos dado que multiplicar algo por cero siempre da cero	
 
+	b) No debería serlo por a) y no esta especificación no permite m=0 como entrada vease la precondición
+
+	c) $pre\{True\}$ $post\{ result = (\neg (m = 0) \land_{L} (n$ mod $m = 0))\}$
+
+	d) True es la afirmación mas débil que hay , asi que la anteriór precondición implica la nueva. En otra palabras la nueva precondición es mas débil que la anteriór. Lo cual tiene sentido , por que la anteriór no dejaba que pase un m=0 , pero esta si.
+\end{ej}
+
+\begin{ej}
+	a) Todo indica que no , por que devolver la que resulta de duplicar sus valores en posiciones pares esta insinuando que sus valores pares deberíab quedar iguales
+
+	b) Si, la satisface, por que la post no pide nada con respecto a las posiciones pares
+	
+	c) habria que agregar un and y hacer lo mismo solo que cambiando mod 2 = 0 entonces $result[i]= l[i]$
+
+	d) La nueva post es mas fuerte, dado que implica la anteriór post, en otras palabras agrega una restricción más, pero la anteriór restricción la sigue cumpliendo , en otras palabras cumple la post anteriór y además cumple otras cosas más.
+\end{ej}
+
+\begin{ej}
+	$proc intToBinary($in $z:\Z,$out $l:seq<\{0,1\}>)\{$
+			
+	$pre\{0 \leq z\}$
+
+	$post\{soloHay1y0s(l) \land (\forall x \in l)(z = \sum_{i = 0}^{|l|-1} l[i].2^{i}) \}$
+	
+	$\}$
+
+	$pred$ $soloHay1y0s($in $result: seq<\Z>)\{$
+
+		$(\forall elem \in \Z)(elem \in result \ra ((elem = 0) \lor ( elem = 1))$
+
+	$\}$
+\end{ej}
+
+\begin{ej}
+	No por que al no tener referencia sobre que se quería lograr con la especificación no puede haber sobre o sub especificación
+\end{ej}
+
+\begin{ej}
+	a) $proc$ $sumarFactoresPrimos($in $ z : \Z, $out $: result :\Z)\{$
+
+		$pre\{z \geq 0\}$
+
+		$post\{result = \sum_{i=0}^{z} $ if $esPrimo(r)$ then i else 0$\}$ 
+
+	$\}$
+
+
+	b) $proc$ $esPerfecto($in $ z : \Z, $out $: result :Bool)\{$
+
+		$pre\{z \geq 0 \}$
+
+		$post\{result = True \iff z = \sum_{i=0}^{z-1} $ if z mod i = 0 then i else 0$\}$ 
+
+	$\}$
+
+
+	c) $proc$ $menorEnteroPositivo($in $ z : \Z, $out $: result :\Z)\{$
+
+		$pre\{z \geq 0\}$
+
+		$post\{result > 1 \land esCoprimo(z,result) \land (\forall r \in \Z)(esCoprimo(r,z) \ra result \leq r)   \}$ 
+
+	$\}$
+
+	Es coprimo esta hecho en la guía anteriór.
+
+	d) Hecho en clase.
+
+	e) $proc$ $difEntreMaxyMin($in $ s : Seq<\Z>, $out $:result :\Z)\{$
+
+		$pre\{True\}$
+
+		$post\{(\forall x,y \in \Z)(0 \leq x,y < |s| \ra result = s[x] - s[y]\}$ 
+
+	$\}$
+\end{ej}
 
 
 

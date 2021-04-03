@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.3.19)  1 APR 2021 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.3.19)  3 APR 2021 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**segundaGuia.tex
-(./segundaGuia.tex
+**terceraGuia.tex
+(./terceraGuia.tex
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-12-03> xparse <2020-03-03>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -214,7 +214,7 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count276
 \l__pdf_internal_box=\box50
 )
-(./segundaGuia.aux)
+(./terceraGuia.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
@@ -325,16 +325,16 @@ This may cause the page layout to be inconsistent, however.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2] [3]
-(./segundaGuia.aux) ) 
+] [2] [3] [4]
+(./terceraGuia.aux) ) 
 Here is how much of TeX's memory you used:
- 3693 strings out of 479383
- 50926 string characters out of 5875830
+ 3694 strings out of 479383
+ 50934 string characters out of 5875830
  343597 words of memory out of 5000000
- 20775 multiletter control sequences out of 15000+600000
+ 20776 multiletter control sequences out of 15000+600000
  408382 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,11n,72p,423b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,12n,72p,423b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
 12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dis
@@ -343,10 +343,10 @@ ublic/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on segundaGuia.pdf (3 pages, 93290 bytes).
+Output written on terceraGuia.pdf (4 pages, 99643 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
