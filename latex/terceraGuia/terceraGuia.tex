@@ -232,7 +232,7 @@ la post de n-esimo1 no implica la de n-esimo2 y viceversa , por lo tanto , un al
 
 		$pre\{z \geq 0\}$
 
-		$post\{result = \sum_{i=0}^{z} $ if $esPrimo(r)$ then i else 0$\}$ 
+		$post\{result = \sum_{i=0}^{z} $ if $esPrimo(r)\land (z $ mod $ 2 = 0) $ then i else 0$\}$ 
 
 	$\}$
 
@@ -265,7 +265,169 @@ la post de n-esimo1 no implica la de n-esimo2 y viceversa , por lo tanto , un al
 		$post\{(\forall x,y \in \Z)(0 \leq x,y < |s| \ra result = s[x] - s[y]\}$ 
 
 	$\}$
+
+	f) $proc$ $devolverDivisor($in $s:Seq<\Z>, $out $:result :\Z)\{$
+
+		$pre\{True\}$
+
+		$post\{result \in s \land (\exists i \in \Z)(0\leq i < |s| \ra s[i]$ mod $ result = 0) \land$ 
+
+			$(\forall i \in \Z)(0 \leq i,r < |s| \ra (\sum_{j=0}^{|s|-1} $if $ s[j]$ mod $result = 0 $ then $ 1 $ else  0 
+
+			$\geq \sum_{j=0}^{|s|-1}$ if $s[j]$ mod $s[i] = 0$ then $1$ else $0$))
 \end{ej}
+
+\begin{ej}
+	a) $proc$ $nEsimaAparicion($in $s:seq<\R>,$ in: $e:\R,$ in: $n:\Z, $ out result$: \Z)\{$
+
+		$pre\{\#apariciones(e,s) = n \geq 1  \}$
+
+		$post\{( l[result]=e ) \land (n = \sum_{i = 0}^{result}$ if $ l[result] = e $ then $ 1 $ else $ 0\})$
+
+	$\}$
+
+	b) $proc$ $nEsimaAparicion($in $:seq<\R>,$ in: $e:\R,$ in: $n:\Z, $ out result$: \Z)\{$
+
+		$pre\{|l| \neq 0 \land e \in seq<\R>\}$
+
+		$post\{( l[result]=e ) \land (n = \sum_{i = 0}^{result}$ if $ l[result] = e $ then $ 1 $ else $ 0\})$
+
+	$\}$
+
+	c) $proc$ $incluida($in lista1:$seq<\Z>,$ in lista2$ :seq<\Z>, $out result$ : Bool)\{$
+
+		$pre\{|s| \leq |t|\}$
+
+		$post\{ result = True \iff \neg(\exists i \in \Z)(0\leq i < |lista1| \ra lista1[i] \notin lista2) \land (\forall i \in \Z) (0 \leq i < |lista1| \ra \# apariciones(lista1[i],lista1) \leq \# apariciones(lista1[i],lista2))\}$
+
+	$\}$
+
+	d) $proc$ $mezclarOrdenado($in s,t:$seq<\Z>, $out result$ : resultl)\{$
+
+		$pre\{|s|\neq |t| \}$
+
+		$post\{ (\forall i\in \Z)( 0 \leq i < |result| \ra_{L} result[i] \in s \lor result[i] \in t) \land estaOrdenada(result) \land |result| = |s| + |t|\}$
+
+	$\}$
+
+	e) $proc$ $interseccionSinRepetidos ($in s,t:$seq<\R>,$out result$ : seq<\R>)\{$
+
+		$pre\{True \}$
+
+		$post\{ (\forall j \in \Z)(0 \leq j < |result| \ra_{L} result[j] \in s \land result[i] \in t)\}$
+
+	$\}$
+
+        f) $proc$ $interseccion$ $ ($in s,t:$seq<\R>,$out result$ : seq<\R>)\{$
+
+		$pre\{True \}$
+
+		$post\{ (\forall j \in \Z)(0 \leq j < |result| \ra_{L} result[j] \in s \land result[i] \land $
+
+		$\# apariciones(result[j],result) = 1 \in t)\}$
+
+	$\}$
+
+\end{ej}
+
+\begin{ej}
+	a) $proc$ $cantidadApariciones$ $($in $ l: seq<Char>,$out $ result: seq<Char \times \Z>)\{$
+
+		$pre\{True\}$
+
+		$post\{(\forall j \in \Z)(0\leq j < |result| \ra result[j][0] \in l \land \# apariciones (result[j][0],l) = result[j][1] \}$
+
+	$\}$
+
+
+
+
+	b) $proc$ $devolvePrefijos$ $($in $ l: seq<\Z>,$out $ result: seq<seq< \Z>>)\{$
+
+		$pre\{True\}$
+
+		$post\{(\forall j \in \Z)(0\leq j < |result|-1 \ra |result[j]| = |result[j+1]|-1) \land $ 
+
+			
+		$(\forall k \in \Z)(0\leq k < |result| \ra_{L} result[k] = subseq(l,0,k+1)) \}$
+
+	$\}$
+
+        c) $proc$ $s$ $($in $ l: seq<seq<\Z>>,$out $ result: <seq< \Z>>)\{$
+
+		$pre\{True\}$
+
+		$post\{ (\forall j \in \Z)(0\leq j < |l| \ra_{L} maximo(l[j]) \leq maximo(result)) \land result \in l\}$ 
+		
+	$\}$
+
+	aux maximo $ ($in $: seq<\Z>) \Z = \sum_{i=0}^{|in| - 1} if (\forall j \in \Z)( 0\leq j < |in|  \land \ra_{L} l[i] \geq l[j]$ then $\frac{l[i]}{\# apariciones(l[i],l)} $ else $ 0 ) $
+
+	d) $proc$ $interseccionMultiple$ $($in $ l: seq<seq<\R>>,$out $ result: <seq< \R>>)\{$
+
+		$pre\{True\}$
+
+		$post\{ (\forall j \in \Z)(0 \leq j < |result| \ra_{L} ((\forall i \in \Z)( 0 \leq i < |l| \ra _{l} result[j] \in l[i]))\}$ 
+		
+	$\}$
+
+
+	e) $proc$ $le$ $($in $ l: seq<\Z>,$out $ result: <seq<$seq $\Z>>)\{$
+
+		$pre\{True\}$
+
+		$post\{ |result| = 2^{|l|} \land (\forall j \in \Z)(0 \leq j < |result| \ra_{L} esSubsecuencia(result[j],l) \land (\forall i \in \Z) (0 \leq i < |result[j]| \ra_{L} result[j][i]  = l[i]  \land (\forall j \in \Z)(0\leq j < |result| \ra_{L} (\forall i \in \Z)( 0 \leq i < |result | \land i \neq j \ra_{L} result[j]\neq result[i])) \}$ 
+
+	$\}$ 
+
+
+	Casi seguro que la condicion del medio no es necesaria, con pedir que sean todas subsecuencias , que no haya repetida y que haya $2^|conjunto|$, seguro voy a tener partes del conjunto
+
+
+\end{ej}
+
+\begin{ej}
+	a) Esta proceso devuelve 3 cosas 
+
+	b) este proceso no devuelve nada 
+
+	c) es la correcta
+
+	d) parece correcta , devuelve la suma 
+
+\end{ej}
+
+\begin{ej}
+	a) Correcta 
+
+	b) Correcta 
+
+	c) Incorrecta se indefine la post, por que L0 no está definida
+
+	d) Correcta , si bien modifica l , el resultado es corecto
+
+	e) Esta post va a ser siempre falsa por que $|l| \neq |L_0| - 1 = |l| -1$
+\end{ej}
+
+\begin{ej}
+	a) La especificación es válida, describe la acción de intercambiar dos valores de una lista
+
+	b) Por ejemplo si ingresamos $<1,2,3> , 0 ,1$  debería cambiar el primer valor con el segundo , sin embargo una salida correcta acorde a la especificación es $<2,1,4>$. Cambió lo que tenía que cambiar pero ademas cambió el último valór , como mantiene la misma longitud está bien.
+
+	c)Agregaría $(\forall r \in \Z)(0 \leq r < |l| \land r \neq i,j \ra_{L} l[i] = L_0 [i])$
+\end{ej}
+
+\begin{ej}
+	Este especificación recibe una lista y una posición , en la lista en esa posición pone lo que había primero en la lista y en el resto de los lugares pone lo que había en la posición , y ademas modifica la posición recibida por el valor que había inicialmente en la lista en la posición 
+\end{ej}
+
+\begin{ej}
+	a) Le falta indicar que en las posiciones impares se mantengan los valores
+
+	$(\forall j \in \Z)(0 \leq j < |l| \land i $ mod $ 2 \neq 0 \ra_{L} l[i] = L_0[i])$
+\end{ej}
+
+
 
 
 
